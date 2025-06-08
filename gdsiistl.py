@@ -24,19 +24,20 @@ import numpy as np # fast math on lots of points
 import triangle # triangulate polygons
 
 # get the input file name
-if len(sys.argv) < 2: # sys.argv[0] is the name of the program
-    print("Error: need exactly one file as a command line argument.")
-    sys.exit(0)
-gdsii_file_path = sys.argv[1]
+# if len(sys.argv) < 2: # sys.argv[0] is the name of the program
+    # print("Error: need exactly one file as a command line argument.")
+    # sys.exit(0)
+# gdsii_file_path = sys.argv[1]
+gdsii_file_path = 'C:/Users/ADMIN/Documents/GitHub/gdsiistl/example/example.gds'
 
 ########## CONFIGURATION (EDIT THIS PART) #####################################
 
 # choose which GDSII layers to use
 layerstack = {
     # layernumber: (zmin, zmax, 'layername'),
-    1: (0, 550, 'substrate'),
-    3: (552, 592, 'soi'),
-    6: (592, 593, 'metal'),
+    1: (0, 20, 'substrate'),
+    3: (22, 32, 'soi'),
+    6: (32, 33, 'metal'),
 }
 
 ########## INPUT ##############################################################
