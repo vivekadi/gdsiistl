@@ -28,16 +28,28 @@ import triangle # triangulate polygons
     # print("Error: need exactly one file as a command line argument.")
     # sys.exit(0)
 # gdsii_file_path = sys.argv[1]
-gdsii_file_path = 'C:/Users/ADMIN/Documents/GitHub/gdsiistl/example/example.gds'
+gdsii_file_path = 'C:/Users/ADMIN/Documents/GitHub/gdsiistl/example/MUX.gds'
 
 ########## CONFIGURATION (EDIT THIS PART) #####################################
 
 # choose which GDSII layers to use
 layerstack = {
     # layernumber: (zmin, zmax, 'layername'),
-    1: (0, 20, 'substrate'),
-    3: (22, 32, 'soi'),
-    6: (32, 33, 'metal'),
+    # 1: (0, 20, 'substrate'),
+    # 3: (22, 32, 'soi'),
+    # 6: (32, 33, 'metal'),
+    
+    2: (0, 2, 'nwell'),
+    4: (0, 2, 'psub'),
+    #5: (0, 20, 'pdummy'),
+    #26: (20, 40, 'nmosVT'),
+    #27: (20, 40, 'pmosVT'),
+    1: (4, 6, 'oxide'),
+    6: (4, 6, 'contact'),
+    3: (6, 8, 'poly'),
+    7: (8, 10, 'metal1')
+    #pin not required for now
+    #7_1: (80, 100, 'metal1pin') 
 }
 
 ########## INPUT ##############################################################
